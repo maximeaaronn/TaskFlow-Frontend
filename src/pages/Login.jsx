@@ -18,7 +18,7 @@ export default function Login () {
 
 
         try{
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/login`, {
+            const response = await axios.post('https://taskflow-backend-s4hm.onrender.com/api/login', {
                email,
                password
             });

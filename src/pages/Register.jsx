@@ -19,7 +19,7 @@ export default function Regsiter() {
         setUser('');
 
         try{
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/register`, {
+            const response = await axios.post('https://taskflow-backend-s4hm.onrender.com/api/register', {
                 name,
                 email,
                 password,
