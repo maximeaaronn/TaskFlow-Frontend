@@ -38,7 +38,7 @@ export default function TaskForm () {
                 });
                 navigate("/Accueil", {replace: true});
             }catch(error){
-                console.error("Création de la tâche impossible !");
+                console.error("Création de la tâche impossible !", error.response?.data || error.message);
             
             };
     };
