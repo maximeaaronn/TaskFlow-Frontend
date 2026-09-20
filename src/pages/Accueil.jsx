@@ -16,7 +16,7 @@ export default function Accueil () {
     //recuperation des tasks
     const fetchTasks = async () => {
         try{
-            const response = await axios.get(`http://127.0.0.1:8000/api/tasks?user_id=${userId}`);
+            const response = await axios.get(`https://taskflow-backend-s4hm.onrender.com/api/tasks?user_id=${userId}`);
             setTasks(response.data);
         }catch(error){
             console.error("Erreur de chargement des tâches !");
@@ -31,7 +31,7 @@ export default function Accueil () {
     const handleDelete = async (id) => {
         if(window.confirm("Voulez-vous vraiment supprimer cette tâche ! ")){
             try{
-                await axios.delete(`http://127.0.0.1:8000/api/tasks/${id}`);
+                await axios.delete(`https://taskflow-backend-s4hm.onrender.com/api/tasks/${id}`);
                 fetchTasks();
             }catch(error){
                 console.error("Erreur de suppression de la tâche !");

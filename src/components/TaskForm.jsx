@@ -14,7 +14,7 @@ export default function TaskForm () {
 
     useEffect(() => {
         if(editingTask) {
-            axios.get(`http://127.0.0.1:8000/api/tasks/${id}`)
+            axios.get(`https://taskflow-backend-s4hm.onrender.com/api/tasks/${id}`)
                 .then(
                     response => {
                         setTitre(response.data.titre);
@@ -30,7 +30,7 @@ export default function TaskForm () {
         e.preventDefault();
 
         try{
-            await axios.post('http://127.0.0.1:8000/api/tasks', {
+            await axios.post('https://taskflow-backend-s4hm.onrender.com/api/tasks', {
                 titre,
                 description,
                 statut,
@@ -46,7 +46,7 @@ export default function TaskForm () {
     const handleEdit = async (e) => {
         e.preventDefault();
         try{
-            await axios.put(`http://127.0.0.1:8000/api/tasks/${id}`, {
+            await axios.put(`https://taskflow-backend-s4hm.onrender.com/api/tasks/${id}`, {
                 titre,
                 description,
                 statut,
