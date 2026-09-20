@@ -26,37 +26,40 @@ export default function TaskForm () {
         }
     }, [id, editingTask]);
 
-    const handleCreate = async (e) => {
-        e.preventDefault();
+    if(editingTask){
+        const handleCreate = async (e) => {
+            e.preventDefault();
 
-        try{
-            await axios.post('https://taskflow-backend-s4hm.onrender.com/api/tasks', {
-                titre,
-                description,
-                statut,
-                user_id: userId
-            });
-            navigate("/Accueil", {replace: true});
-        }catch(error){
-            console.error("Création de la tâche impossible !");
+            try{
+                await axios.post('https://taskflow-backend-s4hm.onrender.com/api/tasks', {
+                   titre,
+                   description,
+                   statut,
+                   user_id: userId
+                });
+                navigate("/Accueil", {replace: true});
+            }catch(error){
+                console.error("Création de la tâche impossible !");
             
-        }
-    };
+            };
+        };
+    }else{
 
-    const handleEdit = async (e) => {
-        e.preventDefault();
-        try{
-            await axios.put(`https://taskflow-backend-s4hm.onrender.com/api/tasks/${id}`, {
-                titre,
-                description,
-                statut,
-                user_id: userId
-            });
-            navigate("/Accueil", {replace: true});
-        }catch(error){
+        const handleEdit = async (e) => {
+            e.preventDefault();
+            try{
+                await axios.put(`https://taskflow-backend-s4hm.onrender.com/api/tasks/${id}`, {
+                   titre,
+                   description,
+                   statut,
+                   user_id: userId
+                });
+                navigate("/Accueil", {replace: true});
+            }catch(error){
                console.error("Modification de la tâche impossible ! ");
-        }
+            };
         
+        };
     };
 
     return(

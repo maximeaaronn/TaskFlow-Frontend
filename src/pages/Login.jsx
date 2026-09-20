@@ -32,7 +32,7 @@ export default function Login () {
             localStorage.setItem('userName', response.data.user.name);
             setTimeout(() => {
                 navigate('/Accueil', {replace: true});
-            }, 2000);
+            }, 1000);
 
 
         }catch(error){
