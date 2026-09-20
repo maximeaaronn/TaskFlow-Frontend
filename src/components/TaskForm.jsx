@@ -26,8 +26,7 @@ export default function TaskForm () {
         }
     }, [id, editingTask]);
 
-    if(editingTask){
-        const handleCreate = async (e) => {
+    const handleCreate = async (e) => {
             e.preventDefault();
 
             try{
@@ -42,10 +41,9 @@ export default function TaskForm () {
                 console.error("Création de la tâche impossible !");
             
             };
-        };
-    }else{
+    };
 
-        const handleEdit = async (e) => {
+    const handleEdit = async (e) => {
             e.preventDefault();
             try{
                 await axios.put(`https://taskflow-backend-s4hm.onrender.com/api/tasks/${id}`, {
@@ -59,7 +57,6 @@ export default function TaskForm () {
                console.error("Modification de la tâche impossible ! ");
             };
         
-        };
     };
 
     return(
