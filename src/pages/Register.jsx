@@ -19,7 +19,7 @@ export default function Regsiter() {
         setUser('');
 
         try{
-            const response = await axios.post('http://127.0.0.1:8000/api/register', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/register`, {
                 name,
                 email,
                 password,
