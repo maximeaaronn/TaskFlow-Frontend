@@ -1,0 +1,23 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "nom": "Client 1",
+      "adresse": "Adresse 1",
+      "tel": 123456789
+    },
+    {
+      "id": "2",
+      "nom": "Client 2",
+      "adresse": "Adresse 2",
+      "tel": 256839038
+    },
+    {
+      "id": "3",
+      "nom": "Client 3",
+      "adresse": "Adresse 3",
+      "tel": 482038748
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

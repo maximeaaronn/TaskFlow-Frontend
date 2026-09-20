@@ -1,0 +1,207 @@
+:root{
+    --border: #E0E0E0;
+    --bleu: #185FA5;
+    --vert: green;
+    --rouge: red;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*Register & Login */
+.container-auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.container-card-auth{
+    border: 1px solid var(--border);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.container-card-auth p{
+    text-align: center;
+    font-size: 15px;
+}
+.container-card-auth h1{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+}
+.container-card-auth h1 em{
+    font-weight: 600;
+    color: var(--bleu);
+}
+.Form-auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Form-auth label{
+    font-weight: 060;
+    margin: 10px;
+}
+.Form-auth textarea{
+    width: 300px;
+    height: 60px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    padding-left: 5px;
+    caret-color: var(--bleu);
+}
+.Form-auth input, select{
+    width: 300px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    padding-left: 5px;
+    caret-color: var(--bleu);
+}
+.Form-auth input::placeholder{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.Form-auth button{
+    background: var(--bleu);
+    color: white;
+    font-weight: 600;
+    width: 300px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+.msg{
+    margin-top: 10px;
+}
+.msg .lien{
+    text-decoration: none;
+    color: var(--bleu);
+    font-weight: 600;
+}
+/*Header*/
+.app-header{
+    border: 1px solid var(--border);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bleu);
+    color: white;
+}
+.app-header h2{
+    font-weight: bolder;
+}
+.app-header span{
+    font-weight: 600;
+}
+.app-header button{
+    margin: 10px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    background: var(--rouge);
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+}
+/*Accuei*/
+.container-accueil{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.ajout button{
+    border: none;
+    background: var(--vert);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 350px;
+    height: 45px;
+    border-radius: 10px;
+}
+.filter-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-btns .active{
+    background: var(--vert);
+    color: white;
+}
+.filter-btns button{
+    border: 1px solid var(--border);
+    width: 80px;
+    height: 50px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.details-info p{
+    margin-top: 10px;
+}
+/*TaskItem*/
+.container-task{
+    border: 1px solid var(--border);
+    width: 350px;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.statut{
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.redColor{
+    background: var(--rouge);
+    color: white;
+}
+.greenColor{
+    background: var(--vert);
+    color: white;
+}
+.bleuColor{
+    background: var(--bleu);
+    color: white;
+}
+.task-action button{
+    margin: 2px;
+}
+.edit{
+    background: var(--bleu);
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 5px;
+}
+.del{
+    background: var(--rouge);
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*footer*/
+footer{
+    background: var(--bleu);
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
